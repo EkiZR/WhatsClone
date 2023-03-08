@@ -1,5 +1,6 @@
 # WhatsClone
-Halo semuanya, perkenalkan nama saya Eki Zulfar Rachman asal bekasi,saya adalah siswa SMK kelas 10 jurusan TKJ, pada kesempatan kali ini saya mencoba menirukan UI dari aplikasi WhatsApp 
+Halo semuanya, perkenalkan nama saya Eki Zulfar Rachman asal bekasi,saya adalah siswa SMK kelas 10 jurusan TKJ, pada kesempatan kali ini saya mencoba menirukan UI dari aplikasi WhatsApp. 
+saya juga baru pertama kali mengikuti showcase di wpu jadi mohon bimbingannya 
 
 Teknologi yang digunakan: 
 - HTML
