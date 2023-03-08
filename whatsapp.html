@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/whatsapp.png" type="image" sizes="16x16">
+  <title>WhatsClone</title>
+
+  <!-- HTML -->
+
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
+</head>
+<body style="background-color: #111B21; font-family: 'Roboto', sans-serif;
+  ">
+  <div class="handphone">
+    <div class="penutup"></div>
+  <div class="penutup-garis" id="penutup-garis">
+  <header>
+    <span id="judul"><input type="text" placeholder="WhatsApp" class="judul">
+    </span>
+
+    <span>
+      <a href="#" class="camera"><ion-icon name="camera-outline" id="camera"></ion-icon> </a>
+    </span>
+    <span>
+      <a href="#" class="search" id="search"><ion-icon name="search-outline"></ion-icon></a>
+    </span>
+
+    <span>
+      <div class="dropdown">
+        <a class="ellipsis" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <ion-icon name="ellipsis-vertical" class="ellipsis"></ion-icon>
+        </a>
+      </span>
+
+        <ul class="dropdown-menu dropdown-menu-end" id="dmul">
+          <li><a class="dropdown-item" href="#" id="dm">Grup Baru</a></li>
+          <li><a class="dropdown-item" href="#" id="dm">Siaran baru</a></li>
+          <li><a class="dropdown-item" href="#" id="dm">Perangkat tertaut</a></li>
+          <li><a class="dropdown-item" href="#" id="dm">Pesan berbintang</a></li>
+          <li><a class="dropdown-item" id="dm">Setelan</a></li>
+          <li><a class="dropdown-item" id="dm"><i class="bi-moon" id="toggleDark"> Dark Mode</i>
+</a></li>
+<li><a class="dropdown-item" href="#" id="dm"><button id="toggleFullscreen">Fullscreen<i class="fa-solid fa-expand" style="margin-left: 0.5em;"></i></button>
+</a></li>
+
+
+
+        </ul>
+      </div>
+    
+  </header>
+
+  <!-- Nav tabs -->
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="com-tab" data-bs-toggle="tab" data-bs-target="#com" type="button" role="tab" aria-controls="com" aria-selected="true"><img src="img/community.png" width="30px" height="30px" id="comfilter"></button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="chat-tab" data-bs-toggle="tab" data-bs-target="#chat" type="button" role="tab" aria-controls="chat" aria-selected="false">Chat
+        <span class="badge-atas" id="badgespan" style="padding-left: 6px; padding-right: 6px; padding-top: 2px; padding-bottom: 2px;">
+          1</span>
+      </button>
+
+
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="status-tab" data-bs-toggle="tab" data-bs-target="#status" type="button" role="tab" aria-controls="status" aria-selected="false">Status</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="panggilan-tab" data-bs-toggle="tab" data-bs-target="#panggilan" type="button" role="tab" aria-controls="panggilan" aria-selected="false">Panggilan</button>
+    </li>
+  </ul>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content active">
+    <div class="tab-pane" id="com" role="tabpanel" aria-labelledby="com-tab" tabindex="0" style="opacity: 95%" ;>
+      <center>
+        <img src="img/comunity.png" alt="comunity.png" width="70%" class="comunity-img">
+        <h4 class="comunity-h4"id="komunitas">Memperkenalkan Komunitas</h4>
+        <h6 class="comunity-h6" id="kelola">Kelola grup terkait Anda dengan mudah dan kirim pengumuman.sekarang,komunitas anda seperti lingkungan atau sekolah,dapat memiki ruang sendiri</h6>
+        <button class="comunity-button" onclick="alertv2()" id="mulai_komunitas">Mulai Komunitas Anda</button>
+      </center>
+    </div>
+
+    <div class="tab-pane active" id="chat" role="tabpanel" aria-labelledby="chat-tab" tabindex="0">
+
+      <!-- chat kesatu -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/e.jpg" id="profile1" class="bg-profile">
+            <input type="file" id="profileInput1" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop1" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- ------ -->
+
+      <!-- chat kedua -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/k.jpg" id="profile2" class="bg-profile">
+            <input type="file" id="profileInput2" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop2" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis1">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- ------ -->
+
+      <!-- chat ketiga -->
+      <table>
+        <tr>
+          <th rowspan="4">
+            <img src="img/i.jpg" id="profile3" class="bg-profile">
+            <input type="file" id="profileInput3" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam" id="jam_chat3"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop3" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis2">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+          <td> <span class="badgeChat" id="badgespan-chat">1</span>
+          </td>
+        </tr>
+      </table>
+      <!-- ----- -->
+
+      <!-- chat keempat -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/kosong.jpg" id="profile4" class="bg-profile">
+            <input type="file" id="profileInput4" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop4" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis3">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- ----- -->
+
+      <!-- chat kelima -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/z.jpg" id="profile5" class="bg-profile">
+            <input type="file" id="profileInput5" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop5" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis4">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- -------- -->
+
+
+      <!-- chat keenam -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/r.jpg" id="profile6" class="bg-profile">
+            <input type="file" id="profileInput6" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop6" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis5">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- -------- -->
+
+      <!-- chat ketujuh -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/kosong.jpg" id="profile7" class="bg-profile">
+            <input type="file" id="profileInput7" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop7" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis6">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- -------- -->
+
+      <!-- chat kelapan -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/kosong.jpg" id="profile8" class="bg-profile">
+            <input type="file" id="profileInput8" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop8" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis7">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- -------- -->
+
+      <!-- chat kesembilan -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/kosong.jpg" id="profile9" class="bg-profile">
+            <input type="file" id="profileInput9" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop9" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis8">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <!-- -------- -->
+
+      <!-- chat kesepuluh -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/kosong.jpg" id="profile10" class="bg-profile">
+            <input type="file" id="profileInput10" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="masukin nama" class="nama"></td>
+          <td><input placeholder="13.20" class="jam"></td>
+        </tr>
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop10" class="button-modal">
+              <img src="img-check/check.svg" alt="" class="ceklis2" id="tanda-ceklis9">
+            </button>
+            <input placeholder="isi pesan" class="pesan">
+          </td>
+        </tr>
+      </table>
+
+      <div class="bulet-bawah" onclick="alertv2()" id="bulet1"></div>
+      <!-- -------- -->
+    </div>
+
+
+    <!-- modal chat 1 -->
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" onclick="tanda()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" onclick="tanda1()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda2()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+           <br>
+            <input type="radio" name="check" onclick="tanda3()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 2 -->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_1()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_1()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_1()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_1()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+
+    <!-- modal chat 3 -->
+    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_2()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_2()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_2()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_2()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 4 -->
+    <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_3()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_3()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_3()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_3()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 5 -->
+    <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_4()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_4()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_4()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_4()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 6 -->
+    <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_5()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_5()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_5()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_5()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 7 -->
+    <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_6()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_6()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_6()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_6()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 8 -->
+    <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_7()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_7()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_7()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_7()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 9 -->
+    <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_8()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_8()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_8()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_8()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- modal chat 10 -->
+    <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">change checkmark</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="radio" name="check" id="1" onclick="tanda_9()"><span>Delete Checkmark</span>
+            <br>
+            <input type="radio" name="check" id="2" onclick="tanda1_9()"><span><img src="img-check/checkb.svg" alt="checkb.svg" class="checkb-modal"></span>
+            <br>
+            <input type="radio" name="check" id="3" onclick="tanda2_9()"><span><img src="img-check/check1.svg" alt="check1.svg" class="check1-modal"></span>
+            <br>
+            <input type="radio" name="check" onclick="tanda3_9()"><span><img src="img-check/check.svg" alt="check1.svg" class="check1-modal"></span>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -- -->
+
+    <!-- perbaikan open status-->
+    <div class="tab-pane " id="status" role="tabpanel" aria-labelledby="status-tab" tabindex="0">
+      <table>
+        <tr>
+          <th rowspan="3">
+             <button data-bs-toggle="modal" data-bs-target="#staticBackdrop-status" style="background: none; border: none;" id="Modal_status">
+               <img src="img/profile.png" class="bg-profile" style="width: 55px; height: 55px" id="status-saya" onclick="open_status_saya1()">
+          </th>
+          <td style="position: absolute;" data-bs-toggle="modal" data-bs-target="#staticBackdrop-status"><img src="img/bulet+.png" alt="" class="bulet-plus" id="bulet-plus"></td>
+        </button>
+      </tr>
+        <tr>  
+         <td>
+          <div class="nama" style="width: 100%" ;>Status Saya</div>
+         </td>
+      </tr>
+        <tr>
+          <td>
+            <div class="pesan" id="pesan-status"> Ketuk untuk menambahkan pembarua...</div>
+          </td>
+        </tr>
+      </table>
+<!--  --  -->
+
+      <div class="bawah-status">Pembaruan terkini</div>
+
+<!-- bagian open status-->
+      <!-- The status container -->
+      <div id="isi_status" class="status-container" onclick="out_status()">
+        <!-- Status content -->
+        <img src="" alt="" id="bg-status-upload" width="100%" height="100%">
+        <div class="status-content">
+          <div class="loading-status"></div>
+          <div class="loading-status-bg"></div>
+
+          <table>
+            <tr>
+              <td rowspan="3"><img src="gambar-arrow/arrow-left.svg" alt="" class="arrow-left"></i></td>
+            </tr>
+            <tr>
+              <td rowspan="3">
+                <img src="img/e.jpg" id="dalam_status" class="bg-profile">
+              </td>
+            </tr>
+            <tr>
+              <td><input placeholder="Rahman" class="nama" id="nama-dalam-status"></td>
+            </tr>
+            <tr>
+              <td>
+                <input placeholder="Hari ini 13.20" class="pesan" id="pesan-dalam-status">
+              </td>
+            </tr>
+            <tr>
+              <td><a onclick=" "><ion-icon name="ellipsis-vertical" class="status-elipsis"></ion-icon></a></td>
+            </tr>
+          </table>
+
+        
+<center class="bawah-dalam-status">
+  <div class="pesan-bawah-status">Hai</div>
+  <i class="fa-solid fa-angle-up" id="angle-up"></i>
+  <div class="balas">Balas</div>
+</center>
+        </div>
+      </div>
+      
+      <!-- jalan terakhir (status-saya) -->
+       <!-- The status container -->
+       <div id="isi_status1" class="status-container1">
+        <div class="view_bawah">
+          <div class="mata"><img src="img/mata.png" alt="" width="25px" height="25px"><input placeholder="10" class="view_total"></input></div>
+        </div>
+        <div class="bg_status" onclick="out_status()">
+          <center>
+          <video controls autoplay id="bg-status-saya1" width="99.5%" height="240"><source src="" alt=""  type="video/mp4"></video>
+          <img src="" alt="" width="100%" height="auto" id="bg-status-saya">
+          </center>
+          </div>
+
+        <!-- Status content -->
+        <div class="status-content">
+          <div class="loading-status"></div>
+          <div class="loading-status-bg"></div>
+         
+          <table>
+            <tr>
+              <td rowspan="3"><img src="gambar-arrow/arrow-left.svg" alt="" class="arrow-left"></i></td>
+            </tr>
+            <tr>
+              <td rowspan="3">
+                <img src="img/e.jpg" id="dalam_status1" class="bg-profile">
+              </td>
+            </tr>
+            <tr>
+              <td><input placeholder="Zulfar" class="nama" id="nama-dalam-status"></td>
+            </tr>
+            <tr>
+              <td>
+                <input placeholder="Hari ini 13.20" class="pesan" id="pesan-dalam-status">
+              </td>
+            </tr>
+            <tr>
+              <td><a onclick=" "><ion-icon name="ellipsis-vertical" class="status-elipsis"></ion-icon></a></td>
+            </tr>
+          </table>
+       
+
+        </div>
+      </div>
+      <!-- --- -->
+
+     
+      <!-- -- -->
+      <table>
+        <tr>
+          <th rowspan="3">
+            <button id="open-status" onclick="open_status()">
+            <img src="img/kucing.jpeg" id="sw-status" class="bg-profile">
+            </button>
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="eki" class="nama"></td>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="35 menit yang lalu" class="pesan" style="margin-left: 1.15%;">
+          </td>
+        </tr>
+      </table>
+
+      <div class="bawah-status" style="opacity: 95%">Pembaruan yang telah dilihat</div>
+
+      <table>
+        <tr>
+          <th rowspan="3">
+            <button onclick="open_status1()" id="open-status">
+            <img src="img/k.jpg" id="sw-status-dilihat" class="bg-profile">
+            </button>
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="zulfar" class="nama"></td>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="35 menit yang lalu" class="pesan" style="margin-left: 1.15%;">
+          </td>
+        </tr>
+      </table>
+      <div class="bulet-bawah" id="bulet3" onclick="alertv2()"></div>
+      <div class="bulet-bawah" id="bulet2" onclick="alertv2()"></div>
+    </div>
+
+    <div class="tab-pane " id="panggilan" role="tabpanel" aria-labelledby="panggilan-tab" tabindex="0">
+   <img src="img/call+.png" alt class="call-plus" width="115px" height="115px" onclick="alertv2()">
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/panggilan.png" id="panggilan-img" class="bg-profile">
+          </th>
+        </tr>
+        <tr>
+          <td class="nama" id="tautan-text">Buat tautan panggilan</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="inset">
+              <marquee class="pesan" id="bagikan-tautan">Bagikan tautan untuk panggilan Whatsapp Anda</marquee>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div class="bawah-status" style="opacity: 95%;margin-left: 5%;">Terbaru</div>
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/i.jpg" id="profile-panggilan" class="bg-profile">
+            <input type="file" id="profileInputp" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="Rah dan 38 lainnya" class="nama"></td>
+          <td class="geserin-phone"><img src="img/phone.svg" id="phone"> </td>
+        </tr> 
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop-arrow" class="arrow">
+          <img src="gambar-arrow/arrow-green.svg" width="15px" height="15px" id="arrow"></button>
+            <input placeholder="30 Januari 13.50" class="pesan">
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th rowspan="3">
+            <img src="img/kucing.jpeg" id="profile-panggilan1" class="bg-profile">
+            <input type="file" id="profileInputp1" style="display:none;">
+          </th>
+        </tr>
+        <tr>
+          <td><input placeholder="zul dan 8 lainnya" class="nama"></td>
+          <td class="geserin-phone"><img src="img/phone.svg" id="phone"> </td>
+        </tr> 
+        <tr>
+          <td>
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop-arrow1" class="arrow" onclick="change_arrow()">
+          <img src="gambar-arrow/arrow-red.svg" width="15px" height="15px" id="arrow1"></button>
+            <input placeholder="30 Januari 13.50" class="pesan">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- modal arrow-->
+  <div class="modal fade" id="staticBackdrop-arrow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">change arrow</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="radio" name="check"  onclick="arrow_1()"><span><img src="gambar-arrow/arrow-red.svg"  class="checkb-modal"></span>
+          <br><br>
+          <input type="radio" name="check"   onclick="arrow_2()"><span><img src="gambar-arrow/arrow-green-up.svg"  class="checkb-modal"></span>
+          <br><br>
+          <input type="radio" name="check"  onclick="arrow_3()"><span><img src="gambar-arrow/arrow-green.svg"  class="check1-modal"></span>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="staticBackdrop-arrow1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">change arrow</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="radio" name="check"  onclick="arrow1_1()"><span><img src="gambar-arrow/arrow-red.svg"  class="checkb-modal"></span>
+          <br><br>
+          <input type="radio" name="check"   onclick="arrow1_2()"><span><img src="gambar-arrow/arrow-green-up.svg"  class="checkb-modal"></span>
+          <br><br>
+          <input type="radio" name="check"  onclick="arrow1_3()"><span><img src="gambar-arrow/arrow-green.svg"  class="check1-modal"></span>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---- -->
+
+ <!-- modal status saya-->
+ <div class="modal fade" id="staticBackdrop-status" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Status Saya</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Masukan Gambar</h6>
+        <input type="file" id="inputstatus" class="inputstatus" onchange="ilang_buttonPlus()">
+        <h6>Masukan video</h6>
+        <input type="file" id="inputstatus1" class="inputstatus" onchange="ilang_buttonPlus()">
+        <h6>Ubah Foto Profile</h6>
+        <input type="file" id="input-profile-saya" class="inputstatus">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ---- -->
+</div>
+<!-- untuk design mode dekstop-->
+<div class="none">
+<span class="batre">100</span>
+<div class="wifi"></div>
+<div class="signal"></div>
+<p class="kecepatan-internet"><span id="speed"></span> KB/d</p>
+<div id="jam"></div>
+</div>
+<div class="tombol-power"></div>
+<div class="volume-up"></div>
+<div class="volume-down"></div>
+<h1 class="Wclone">WhatsApp Clone</h1>
+<h2 class="fitur">Fitur :</h2>
+<h3 class="fitur-list">
+  <ol>
+    <li>Can change the title</li>
+    <li>Can change contact name</li>
+    <li>can change the message</li>
+    <li>can change the message time</li>
+    <li>can change the checkmark</li>
+    <li>Can FullScreen</li>
+    <li>Dark Mode/Light Mode</li>
+    <li>can upload status (only image)</li>
+    <li>And more...</li>
+  </ol>
+</h3>
+<h6 class="versi-1">V1</h6>
+  <!-- Project -->
+    <script src="main.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

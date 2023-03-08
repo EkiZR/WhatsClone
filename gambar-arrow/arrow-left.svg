@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+<desc>Created with Fabric.js 3.5.0</desc>
+<defs>
+</defs>
+<rect x="0" y="0"  fill="rgba(255,255,255,0)"/>
+<g transform="matrix(7.1023 0 0 7.1023 315.4525 639.6809)" id="Layer_1">
+<line style="stroke:  #ffffff; stroke-width: 12; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 10; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;" x1="19.6665" y1="19.667" x2="-19.6665" y2="-19.667"/>
+</g>
+<g transform="matrix(7.1023 0 0 7.1023 315.4525 360.319)" id="Layer_1">
+<line style="stroke:  #ffffff; stroke-width: 12; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 10; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;" x1="-19.6665" y1="19.667" x2="19.6665" y2="-19.667"/>
+</g>
+<g transform="matrix(5.8322 0 0 7.1023 468.6274 500)" id="Layer_1">
+<line style="stroke: #ffffff; stroke-width: 12; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 10; is-custom-font: none; font-file-url: none; fill: none; fill-rule: nonzero; opacity: 1;" x1="-44.212999999999994" y1="0" x2="50.212999999999994" y2="0"/>
+</g>
+</svg>

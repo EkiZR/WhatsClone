@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+  position: absolute;
+}
+
+#jam {
+  color: rgba(255, 255, 255, 0.944);
+  font-size: 3em;
+  position: absolute;
+  top: 18%;
+  left: 6%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.matahari {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 213, 0);
+  border-radius: 100%;
+  position: absolute;
+  top: 19%;
+  right: 6.9%;
+}
+
+.awan1,
+.awan2 {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 22.2%;
+  right: 14%;
+}
+
+.awan2 {
+  right: 12.6%;
+  width: 10.5px;
+  top: 23.1%;
+  height: 10.5px;
+}
+
+.batre {
+  border: 1px solid white;
+  background: rgba(75, 76, 89, 0.48);
+  border-radius: 5em;
+  font-size: 0.1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  position: absolute;
+  top: 1%;
+  right: 2.2%;
+  color: white;
+}
+
+.kecepatan-internet {
+  color: white;
+  position: absolute;
+  right: 19.8%;
+  font-size: 0.75em;
+  top: 1%;
+}
+
+.wifi {
+  background: url("img-wifi/wifi-1.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  animation: berubah 2s infinite;
+  transition: none;
+  position: absolute;
+  top: 0.6%;
+  font-size: 10px;
+  right: 0;
+}
+
+@keyframes berubah {
+  0% {
+    background: url("img-wifi/wifi-2.svg") no-repeat;
+  }
+  50% {
+    background: url("img-wifi/wifi-1.svg") no-repeat;
+  }
+  100% {
+    background: url("img-wifi/wifi.svg") no-repeat;
+  }
+}
+
+.signal {
+  background: url("signal-svg/signal5.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 1.1%;
+  right: 4.5%;
+  animation: signal 5s infinite;
+  transition: none;
+}
+
+@keyframes signal {
+  0% {
+    background: url("signal-svg/signal5.svg") no-repeat;
+  }
+  50% {
+    background: url("signal-svg/signal4.svg") no-repeat;
+  }
+  100% {
+    background: url("signal-svg/signal3.svg") no-repeat;
+}
+}
+
+#bawah-jam {
+  color: rgba(255, 255, 255, 0.733);
+  font-size: 0.8em;
+  position: absolute;
+  top: 26.5%;
+  left: 6.7%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.text-cerah {
+  color: rgba(255, 255, 255, 0.733);
+  position: absolute;
+  font-size: 0.8em;
+  top: 26.5%;
+  right: 7%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.search {
+  width: 85%;
+  background-color: rgba(255, 255, 255, 0.934);
+  border-radius: 10em;
+  margin-top: 4em;
+  background-image: url("img/google.png");
+  background-repeat: no-repeat;
+  background-position: 5%;
+  background-size: 1.3em;
+  font-size: 1em;
+  padding-left: 2em;
+  padding: 0.5em 2.9em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border: none;
+}
+
+.versi-1,
+.image-untuk-pc {
+  display: none;
+}
+
+.atur-icon {
+  color: white;
+  font-size: 0.6em;
+  text-decoration: none;
+  padding: 1em;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon div {
+  position: relative;
+  bottom: 0.5em;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 90%;
+  list-style: none;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .handphone {
+    position: relative;
+    height: 89vh;
+    width: 25%;
+    border: 10px solid #132932;
+    border-radius: 20pt;
+    margin: auto;
+    margin-top: 2.7%;
+    box-shadow: #20bdff 0px 1px 2px 0px, #20bdff 0px 1px 3px 1px;
+  }
+
+  .penutup {
+    display: block;
+    position: absolute;
+    width: 0.57em;
+    height: 9%;
+    left: -2.528%;
+    top: 15%;
+    z-index: 1000;
+    background-color: #132932;
+  }
+
+
+  header {
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+  }
+
+  .tombol-power,
+  .volume-up,
+  .volume-down {
+    height: 0.5vh;
+    width: 3%;
+    background-color: #20bdff;
+    position: absolute;
+    top: 25%;
+    right: 35.77%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    rotate: 90deg;
+    z-index: 1;
+  }
+
+  .volume-up {
+    right: 61.2%;
+    rotate: 270deg;
+    top: 28%;
+  }
+
+  .volume-down {
+    right: 61.2%;
+    rotate: 270deg;
+    top: 35%;
+  }
+
+  .versi-1 {
+    display: block;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    color: white;
+  }
+
+  body {
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+  }
+
+  .background {
+    height: 87vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
