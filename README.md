@@ -10,14 +10,14 @@ Teknologi yang digunakan:
 - ionicons & fontawesome
 
 Fiturnya antara lain:
-1.Bisa ganti judul
-2.Dapat mengubah nama kontak
-3.dapat mengubah pesan
-4.dapat mengubah waktu pesan
-5.dapat mengubah tanda centang
-6.Bisa FullScreen
-7.Mode Gelap/Mode Terang
-8.dapat mengunggah status
+- Bisa ganti judul
+- Dapat mengubah nama kontak
+- dapat mengubah pesan
+- dapat mengubah waktu pesan
+- dapat mengubah tanda centang
+- Bisa FullScreen
+- Mode Gelap/Mode Terang
+- dapat mengunggah status
 
 Link website : 
 Link repo : https://github.com/EkiZR/WhatsClone/
