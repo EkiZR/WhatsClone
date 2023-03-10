@@ -11,12 +11,10 @@ badge.style.color = "#1F2C32";
 badge.style.background = "var(--green)";
 
 button1.addEventListener("click", function () {
-  // mengubah warna button 1 saat diklik
   button1.style.color = "var(--green)";
   button1.style.borderBottom = "2.5px solid var(--green)";
   badge.style.background = "var(--pudar)";
 
-  // menghapus warna dari button 2
   button2.style.color = "";
   button3.style.color = "";
   button4.style.color = "";
@@ -25,14 +23,12 @@ button1.addEventListener("click", function () {
   button4.style.border = "";
 });
 
-// menambahkan event listener pada button 2
+
 button2.addEventListener("click", function () {
-  // mengubah warna button 2 saat diklik
   button2.style.color = "var(--green)";
   button2.style.borderBottom = "2.5px solid var(--green)";
   badge.style.background = "var(--green)";
 
-  // menghapus warna dari button 1
   button1.style.color = "";
   button3.style.color = "";
   button4.style.color = "";
@@ -43,11 +39,9 @@ button2.addEventListener("click", function () {
 });
 
 button3.addEventListener("click", function () {
-  // mengubah warna button 2 saat diklik
   button3.style.color = "var(--green)";
   button3.style.borderBottom = "2.5px solid var(--green)";
   badge.style.background = "var(--pudar)";
-  // menghapus warna dari button 1
 
   button4.style.border = "";
   button2.style.border = "";
@@ -58,12 +52,9 @@ button3.addEventListener("click", function () {
 });
 
 button4.addEventListener("click", function () {
-  // mengubah warna button 2 saat diklik
   button4.style.color = "var(--green)";
   button4.style.borderBottom = "2.5px solid var(--green)";
   badge.style.background = "var(--pudar)";
-
-  // menghapus warna dari button 1
 
   button3.style.border = "";
   button2.style.border = "";
@@ -346,8 +337,6 @@ const panggilan1 = document.getElementById("profile-panggilan1");
 const statuss = document.getElementById("status-saya");
 const profile_saya = document.getElementById("dalam_status1");
 
-
-
 // ------------
 
 // get id profile input
@@ -425,8 +414,8 @@ input_status.addEventListener("change", function (event) {
   reader.onload = function () {
     var dataURL = reader.result;
     statuss.src = dataURL;
-    document.getElementById('bg-status-saya').src = dataURL;
-    document.getElementById('bg-status-saya1').style.display = 'none';
+    document.getElementById("bg-status-saya").src = dataURL;
+    document.getElementById("bg-status-saya1").style.display = "none";
   };
   reader.readAsDataURL(event.target.files[0]);
 });
@@ -437,11 +426,11 @@ input_status1.addEventListener("change", function (event) {
   reader.onload = function () {
     var dataURL = reader.result;
     statuss.src = dataURL;
-    document.getElementById('bg-status-saya1').src = dataURL;
-    document.getElementById('bg-status-saya').style.display = 'none';
+    document.getElementById("bg-status-saya1").src = dataURL;
+    document.getElementById("bg-status-saya").style.display = "none";
   };
   reader.readAsDataURL(event.target.files[0]);
-}); 
+});
 
 profileInputp.addEventListener("change", function (event) {
   var reader = new FileReader();
@@ -563,7 +552,7 @@ const mulai_komunitas = document.getElementById("mulai_komunitas");
 const bulet_pen = document.getElementById("bulet3");
 const comfilter = document.getElementById("comfilter");
 const bulet_plus = document.getElementById("bulet-plus");
-const shadow_bottom = document.getElementById("myTab")
+const shadow_bottom = document.getElementById("myTab");
 
 toggle.addEventListener("click", function () {
   this.classList.toggle("bi-brightness-high-fill");
@@ -576,19 +565,17 @@ toggle.addEventListener("click", function () {
     document.documentElement.style.setProperty("--bgdark", "#202C33");
     document.documentElement.style.setProperty("--pudar", "#8696A0");
     document.documentElement.style.setProperty("--green", "#00A884");
-    document.getElementById('badgespan').style.color = 'var(--bgdark)';
-    document.getElementById('badgespan-chat').style.color = 'var(--bgdark)';
-    document.getElementById('badgespan-chat').style.fontWeight = '600';
-    shadow_bottom.style.boxShadow = '0px 5px 5px -5px rgba(0, 0, 0, 0.222)';
+    document.getElementById("badgespan").style.color = "var(--bgdark)";
+    document.getElementById("badgespan-chat").style.color = "var(--bgdark)";
+    document.getElementById("badgespan-chat").style.fontWeight = "600";
+    shadow_bottom.style.boxShadow = "0px 5px 5px -5px rgba(0, 0, 0, 0.222)";
     komunitas.style.color = "white";
     kelola.style.color = "#8696A0";
     mulai_komunitas.style.color = "black";
     bulet_pen.style.backgroundColor = "#233138";
-    bulet_pen.style.backgroundImage ='url("img/pen.svg")';
+    bulet_pen.style.backgroundImage = 'url("img/pen.svg")';
     comfilter.style.filter = "brightness(1)";
-    bulet_plus.style.borderColor = 'var(--bgdark)';
-
-
+    bulet_plus.style.borderColor = "var(--bgdark)";
   } else {
     body.style.background = "#FFFFFF";
     body.style.transition = "1s";
@@ -598,19 +585,19 @@ toggle.addEventListener("click", function () {
     document.documentElement.style.setProperty("--bgdark", "#008069");
     document.documentElement.style.setProperty("--pudar", "#B3D9D2");
     document.documentElement.style.setProperty("--green", "white");
-    document.getElementById('badgespan').style.color = '#008069';
-    document.getElementById('badgespan-chat').style.color = 'white';
-    document.getElementById('badgespan-chat').style.fontWeight = '400';
-    shadow_bottom.style.boxShadow = '0 4px 3.9px -2px rgba(0, 0, 0, 0.5)';
+    document.getElementById("badgespan").style.color = "#008069";
+    document.getElementById("badgespan-chat").style.color = "white";
+    document.getElementById("badgespan-chat").style.fontWeight = "400";
+    shadow_bottom.style.boxShadow = "0 4px 3.9px -2px rgba(0, 0, 0, 0.5)";
 
     komunitas.style.color = "black";
     kelola.style.color = "#484b4d";
     mulai_komunitas.style.color = "white";
     bulet_pen.style.backgroundColor = "#d9e0e3";
-    bulet_pen.style.backgroundImage ='url("img/pen light.svg")';
-    
+    bulet_pen.style.backgroundImage = 'url("img/pen light.svg")';
+
     comfilter.style.filter = "brightness(1.4)";
-    bulet_plus.style.borderColor = 'white';
+    bulet_plus.style.borderColor = "white";
   }
 });
 
@@ -631,39 +618,40 @@ toggleFullscreenButton.addEventListener("click", toggleFullscreen);
 //status
 var btn = document.getElementById("open-status");
 var isi_status = document.getElementById("isi_status");
-var bg_status = document.getElementById('bg-status-upload');
-
+var bg_status = document.getElementById("bg-status-upload");
+var pesanStatus = document.getElementById('pesan_status');
 
 function open_status() {
-  bg_status.src = '';
-  bg_status.style.display = 'none';
-  dalam_status.src = 'img/e.jpg';
+  bg_status.src = "";
+  bg_status.style.display = "none";
+  dalam_status.src = "img/e.jpg";
   isi_status.style.backgroundImage = "url(img/kucing.jpeg)";
   isi_status.style.display = "block";
+  pesanStatus.innerHTML = "Turu masbro";
   document.getElementById("nama-dalam-status").placeholder = "eki";
   setTimeout(function () {
     isi_status.style.display = "none";
-  }, 7000);
+  }, 5000);
 }
 
 function open_status1() {
-  bg_status.src = '';
-  bg_status.style.display = 'none';
-  dalam_status.src = 'img/z.jpg';
-  isi_status.style.backgroundImage = "url(img/tes.jpg)";
+  bg_status.src = "";
+  bg_status.style.display = "none";
+  dalam_status.src = "img/z.jpg";
+  isi_status.style.backgroundImage = "url(img/kucing.jpg)";
+  pesanStatus.innerHTML = "Malas masbro";
   document.getElementById("nama-dalam-status").placeholder = "zulfar";
   isi_status.style.display = "block";
   setTimeout(function () {
     isi_status.style.display = "none";
-  }, 7000);
+  }, 5000);
 }
-
 
 function open_status_saya() {
   isi_status1.style.display = "block";
   setTimeout(function () {
     isi_status.style.display = "none";
-  }, 7000);
+  }, 5000);
 }
 
 function out_status() {
@@ -673,71 +661,65 @@ function out_status() {
   });
 }
 
-const Modal_status = document.getElementById('staticBackdrop-status');
-const status_open = document.getElementById('status-saya');
+const Modal_status = document.getElementById("staticBackdrop-status");
+const status_open = document.getElementById("status-saya");
 
 function ilang_buttonPlus() {
-  bulet_plus.style.display = 'none';
-  Modal_status.id = '';
+  bulet_plus.style.display = "none";
+  Modal_status.id = "";
   status_open.onclick = open_status_saya;
-  status_open.style.border = '2px solid var(--grey)';
-  status_open.style.padding = '0.1em';
+  status_open.style.border = "2px solid var(--grey)";
+  status_open.style.padding = "0.1em";
 }
-
 
 function getSpeed() {
   var xhr = new XMLHttpRequest();
   var startTime, endTime, speed;
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      endTime = (new Date()).getTime();
-      var size = parseFloat(xhr.getResponseHeader('Content-Length')) / 1024;
+      endTime = new Date().getTime();
+      var size = parseFloat(xhr.getResponseHeader("Content-Length")) / 1024;
       speed = (size / ((endTime - startTime) / 1000)).toFixed(1);
       document.getElementById("speed").innerHTML = speed;
     }
   };
-  startTime = (new Date()).getTime();
+  startTime = new Date().getTime();
   xhr.open("GET", "whatsapp.html", true);
   xhr.send();
 }
-setInterval(getSpeed, 1000); 
+setInterval(getSpeed, 1000);
 function wifi() {
-wifi = document.getElementById('wifi');
-wifi.src = "img-wifi/wifi-1.svg";
+  wifi = document.getElementById("wifi");
+  wifi.src = "img-wifi/wifi-1.svg";
 }
-setInterval(wifi, 1000); 
+setInterval(wifi, 1000);
 
 function tampilkanJam() {
-  var waktu = new Date(); // buat objek Date
-  var jam = waktu.getHours(); // ambil nilai jam dari objek Date
-  var menit = waktu.getMinutes(); // ambil nilai menit dari objek Date
-  var detik = waktu.getSeconds(); // ambil nilai detik dari objek Date
+  var waktu = new Date(); 
+  var jam = waktu.getHours(); 
+  var menit = waktu.getMinutes();  
+  var detik = waktu.getSeconds();  
   var hari = waktu.getDay();
-  var ampm = jam >= 12 ? 'PM' : 'AM'; // menentukan AM atau PM
+  var ampm = jam >= 12 ? "PM" : "AM"; 
 
-  // ubah format 24 jam menjadi 12 jam
   if (jam > 24) {
     jam -= 12;
   }
 
-  // tambahkan angka 0 jika nilai jam, menit, atau detik kurang dari 10
   if (jam < 10) {
-    jam = '0' + jam;
+    jam = "0" + jam;
   }
 
   if (menit < 10) {
-    menit = '0' + menit;
+    menit = "0" + menit;
   }
 
   if (detik < 10) {
-    detik = '0' + detik;
+    detik = "0" + detik;
   }
-
-  // tampilkan waktu jam pada elemen HTML
-  document.getElementById('jam').innerHTML = jam + ':' + menit;
+  document.getElementById("jam").innerHTML = jam + ":" + menit;
 }
 
-tampilkanJam(); // panggil fungsi untuk menampilkan waktu jam pertama kali
+tampilkanJam(); 
 
-setInterval(tampilkanJam, 1000); // panggil fungsi setiap 1 detik untuk memperbarui waktu jam
-
+setInterval(tampilkanJam, 1000); 

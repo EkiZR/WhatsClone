@@ -1,9 +1,9 @@
 function tampilkanJam() {
-  var date = new Date(); // buat objek Date
-  var jam = date.getHours(); // ambil nilai jam dari objek Date
-  var menit = date.getMinutes(); // ambil nilai menit dari objek Date
-  var detik = date.getSeconds(); // ambil nilai detik dari objek Date
-  var ampm = jam >= 12 ? "PM" : "AM"; // menentukan AM atau PM
+  var date = new Date(); 
+  var jam = date.getHours(); 
+  var menit = date.getMinutes(); 
+  var detik = date.getSeconds(); 
+  var ampm = jam >= 12 ? "PM" : "AM"; 
   var months = [
     "Januari",
     "Februari",
@@ -47,17 +47,15 @@ function tampilkanJam() {
     menit = '0' + menit;
   }
 
-
-  // tampilkan waktu jam pada elemen HTML
   document.getElementById("jam").innerHTML = jam + ":" + menit;
 
   document.getElementById("bawah-jam").innerHTML =
     thisDay + ", " + day + " " + months[month];
 }
 
-tampilkanJam(); // panggil fungsi untuk menampilkan waktu jam pertama kali
+tampilkanJam(); 
 
-setInterval(tampilkanJam, 1000); // panggil fungsi setiap 1 detik untuk memperbarui waktu jam
+setInterval(tampilkanJam, 1000); 
 
 function getSpeed() {
   var xhr = new XMLHttpRequest();

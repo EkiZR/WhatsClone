@@ -4,129 +4,190 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="WhatsClone" />
+    <meta property="og:image" content="img/meta img.png" />
     <title>Handphone</title>
     <link rel="icon" href="handphone.png" type="image" sizes="16x16" />
-
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-    />
-    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <link rel="stylesheet" href="handphone.css" />
   </head>
 
   <body style="font-family: Roboto, sans-serif">
     <div class="handphone">
-        <img src="img/kucing.jpg" class="background">
+      <img src="img/kucing.jpg" class="background" />
       <div class="garisHp">
-      <span class="batre">100</span>
-      <div class="wifi"></div>
-      <div class="signal"></div>
-      <p class="kecepatan-internet"><span id="speed"></span> KB/d</p>
-      <center>
-        <input type="text" placeholder="Search.." class="search" />
-      </center>
-      <p id="jam"></p>
-      <div id="bawah-jam"></div>
-      <div class="matahari"></div>
-      <div class="awan1"></div>
-      <div class="awan2"></div>
-      <div class="text-cerah">Cerah 30°C</div>
+        <span class="batre">100</span>
+        <div class="wifi"></div>
+        <div class="signal"></div>
+        <p class="kecepatan-internet"><span id="speed"></span> KB/d</p>
+        <center>
+          <input type="text" placeholder="Search.." class="search" />
+        </center>
+        <p id="jam"></p>
+        <div id="bawah-jam"></div>
+        <div class="matahari"></div>
+        <div class="awan1"></div>
+        <div class="awan2"></div>
+        <div class="text-cerah">Cerah 30°C</div>
 
-      <ul class="icon">
-        <li>
-          <a href="whatsapp.html" class="atur-icon">
-            <img
-              src="icon-apk/whatsapp1.png"
-              alt=""
- b             width="40px"
-              height="40px" style="border-radius: 3pt;"
-            /><br />
-            <div>WhatsApp</div>
-          </a>
-        </li>
-        <li> <a href="#" class="atur-icon" onclick="cant()">
-          <img
-            src="icon-apk/instagram.png"
-            alt=""
-            width="40px"
-            height="40px"
-          /><br />
-          <div>Instagram</div>
-        </a>
-</li>
-<li> <a href="#" class="atur-icon" onclick="cant()">
-  <img
-    src="icon-apk/chrome.png"
-    alt=""
-    width="40px"
-    height="40px"
-  /><br />
-  <div>Chrome</div>
-</a>
-</li>
-<li> <a href="#" class="atur-icon" onclick="cant()">
-  <img
-    src="icon-apk/youtube.png"
-    alt=""
-    width="40px"
-    height="40px"
-  /><br />
-  <div>Youtube</div>
-</a>
-</li>
-<li>
-  <a href="#" class="atur-icon" onclick="cant()">
-    <img
-      src="icon-apk/Spotify.png"
-      alt=""
-      width="40px"
-      height="40px"
-    /><br />
-    <div>Spotify</div>
-  </a>
-</li>
-<li><a href="#" class="atur-icon" onclick="cant()">
-  <img
-    src="icon-apk/Weather Icon.png"
-    alt=""
-    width="40px"
-    height="40px"
-  /><br />
-  <div>Weather</div>
-</a></li>
-<li>  <a href="#" class="atur-icon" onclick="cant()">
-  <img
-    src="icon-apk/Music Icon.png"
-    alt=""
-    width="40px"
-    height="40px"
-  /><br />
-  <div>Music</div>
-</a></li>
-<li> <a href="#" class="atur-icon" onclick="cant()">
-  <img src="icon-apk/catatan.png" 
-        alt="" 
-        width="40px" 
-        height="40px" />
-        <br/>
-  <div>Catatan</div>
-</a></li>
-      </ul>
+        <div class="buletKecil">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="icon">
+          <li>
+            <a href="whatsapp.html" class="atur-icon">
+              <img
+                src="icon-apk/whatsapp1.png"
+                alt=""
+                b
+                width="40px"
+                height="40px"
+                style="border-radius: 3pt"
+              /><br />
+              <div>WhatsApp</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/instagram.png"
+                alt=""
+                width="40px"
+                height="40px"
+              /><br />
+              <div>Instagram</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/chrome.png"
+                alt=""
+                width="40px"
+                height="40px"
+              /><br />
+              <div>Chrome</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/youtube.png"
+                alt=""
+                width="40px"
+                height="40px"
+              /><br />
+              <div>Youtube</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/Spotify.png"
+                alt=""
+                width="40px"
+                height="40px"
+              /><br />
+              <div>Spotify</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/Weather Icon.png"
+                alt=""
+                width="40px"
+                height="40px"
+              /><br />
+              <div>Weather</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/Music Icon.png"
+                alt=""
+                width="40px"
+                height="40px"
+              /><br />
+              <div>Music</div>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/catatan.png"
+                alt=""
+                width="40px"
+                height="40px"
+              />
+              <br />
+              <div>Catatan</div>
+            </a>
+          </li>
+          <li class="icon-bawah">
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/telephone.png"
+                alt=""
+                width="40px"
+                height="40px" style="border-radius: 5pt;"
+              />
+              <br />
+              <div>Telephone</div>
+            </a>
+          </li>
+          <li class="icon-bawah">
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/twiter.png"
+                alt=""
+                width="40px"
+                height="40px" style="border-radius: 5pt;"
+              />
+              <br />
+              <div>Twiter</div>
+            </a>
+          </li>
+          <li class="icon-bawah">
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/pinterest.png"
+                alt=""
+                width="40px"
+                height="40px"
+              />
+              <br />
+              <div>Pinterest</div>
+            </a>
+          </li>
+          <li class="icon-bawah">
+            <a href="#" class="atur-icon" onclick="cant()">
+              <img
+                src="icon-apk/file-manager.png"
+                alt=""
+                width="40px"
+                height="40px"
+              />
+              <br />
+              <div>Catatan</div>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    
 
     <div class="tombol-power"></div>
     <div class="volume-up"></div>
     <div class="volume-down"></div>
     <h6 class="versi-1">V1</h6>
-    
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="handphone.js"></script>
   </body>
 </html>

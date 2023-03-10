@@ -186,8 +186,40 @@ body {
 .icon {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 90%;
+  margin-top: 89%;
   list-style: none;
+}
+
+.icon-bawah {
+  margin-top: 20%;
+}
+
+.buletKecil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   top: 30.8em;
+    
+}
+
+.buletKecil span {
+  background-color: rgba(255, 255, 255, 0.767);
+  opacity: 40%;
+  border-radius: 50%;
+  width: 0.4em;
+  height: 0.4em;
+  position: absolute;
+}
+
+.buletKecil span:nth-child(1){
+  margin-left: 15%;
+}
+
+.buletKecil span:nth-child(2){
+  margin-right: 15%;
+  opacity: 65%;
+
 }
 
 
