@@ -186,7 +186,8 @@ body {
 .icon {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 89%;
+  position: relative;
+  top: 19em;
   list-style: none;
 }
 
@@ -199,7 +200,7 @@ body {
     justify-content: center;
     align-items: center;
    position: relative;
-   top: 30.8em;
+   top: 29.5em;
     
 }
 
@@ -301,4 +302,6 @@ body {
     top: 0;
     left: 0;
   }
+
+
 }
