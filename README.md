@@ -19,6 +19,7 @@ Fiturnya antara lain:
 - Mode Gelap/Mode Terang
 - dapat mengunggah status
 
-Link website : https://ekizr.github.io/WhatsClone/                                                                                                                    Link repo : https://github.com/EkiZR/WhatsClone/
+Link website : https://ekizr.github.io/WhatsClone/ 
+Link repo : https://github.com/EkiZR/WhatsClone/
 
 Mohon kritik dan saran dan Terima kasih 🙏
