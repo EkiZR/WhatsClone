@@ -1,3 +1,10 @@
+Swal.fire({
+  icon: 'info',
+  title: 'Dalam Pengembangan',
+  color: 'white',
+  footer: '<a href="https://www.tiktok.com/@eki_zulfar" style="color:white; text-decoration:none; margin-right: 5%;">Tiktok: ekizr_ </a> <a href="https://www.instagram.com/ekizr_/" style="color:white; text-decoration:none;">IG: ekizr_</a>'
+})
+
 function tampilkanJam() {
   var date = new Date(); 
   var jam = date.getHours(); 
